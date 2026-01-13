@@ -95,16 +95,16 @@ export default function Navbar() {
             )}
 
             {/* Auth Buttons */}
-            {user ? (
-              <div className="flex items-center gap-2 ml-2">
-                <div className="hidden md:flex items-center gap-2 px-3 py-2 bg-white bg-opacity-20 rounded-lg">
-                  <FiUser size={16} />
-                  <span className="text-sm">{user.email}</span>
-                </div>
-                <button
-                  onClick={handleLogout}
-                  className="flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg transition-colors"
-                >
+             {user ? (
+                <div className="flex items-center gap-2 ml-2">
+                  <div className="flex items-center gap-2 px-3 py-2 bg-white rounded-lg">
+                    <FiUser size={16} className="text-indigo-600" />
+                    <span className="text-sm text-gray-800 truncate max-w-[150px]">{user.email}</span>
+                  </div>
+                  <button
+                    onClick={handleLogout}
+                    className="flex items-center gap-2 px-4 py-2 bg-red-500 hover:bg-red-600 rounded-lg transition-colors"
+                  >
                   <FiLogOut size={20} />
                   <span className="hidden sm:inline">ออกจากระบบ</span>
                 </button>
